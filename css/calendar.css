@@ -1,0 +1,26 @@
+.bg-dark {
+  background-color: #343a40; /* dark background */
+}
+
+.text-light {
+  color: #e01313; /* light text color */
+}
+
+/* Additional styling for FullCalendar to match */
+#calendar {
+  background-color: rgb(16, 17, 18);
+  border: 2px solid rgb(108, 117, 125);
+  border-radius: 5px; /* Add rounded corners if you want */
+  height: 100%; /* Ensure the calendar fills the container */
+}
+
+/* Adjusting FullCalendar header */
+.fc-header-toolbar {
+  background-color: rgb(16, 17, 18); /* Darker background for the header */
+  color: #ffffff; /* Light text color for header */
+}
+
+/* Adjusting other parts of FullCalendar */
+.fc-daygrid-day {
+  background-color: transparent; /* Ensure days have no background */
+}

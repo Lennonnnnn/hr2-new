@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 0;
+    background-color: rgba(24, 25, 26);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+    color: #faf6f6;
+}
+
+.scanner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+video {
+    width: 100%;
+    max-width: 600px;
+    border: 5px solid #000000;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#outputMessage {
+    font-size: 1.2em;
+    color: #faf6f6;
+}
+
+#outputData {
+    font-size: 1.5em;
+    color: #faf6f6;
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.records {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.records h2 {
+    text-align: center;
+    color: #faf6f6;
+    margin-bottom: 20px;
+}
+
+.records table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.records th,
+.records td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+    color: #faf6f6;
+}
+
+.records th {
+    background-color: #f0f0f0;
+    color: #000000;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}

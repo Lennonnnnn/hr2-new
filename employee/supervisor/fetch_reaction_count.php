@@ -1,0 +1,39 @@
+<?php
+session_start();
+include '../../db/db_conn.php'; // Include your database connection
+
+if (!isset($_SESSION['e_id']) && !isset($_SESSION['a_id'])) {
+    echo json_encode(['status' => 'error', 'message' => 'Unauthorized access']);
+    exit();
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $data = json_decode(file_get_contents('php://input'), true);
+    $employeeId = $data['employee_id'];
+
+    // Validate input
+    if (empty($employeeId)) {
+        echo json_encode(['status' => 'error', 'message' => 'Invalid input']);
+        exit();
+    }
+
+    // Fetch unique reaction count from the database
+    $sql = "SELECT COUNT(DISTINCT account_id) AS count FROM employee_reactions WHERE employee_id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $employeeId);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $row = $result->fetch_assoc();
+
+    if ($row) {
+        echo json_encode(['status' => 'success', 'count' => $row['count']]);
+    } else {
+        echo json_encode(['status' => 'error', 'message' => 'Failed to fetch reaction count']);
+    }
+
+    $stmt->close();
+    $conn->close();
+} else {
+    echo json_encode(['status' => 'error', 'message' => 'Invalid request method']);
+}
+?>

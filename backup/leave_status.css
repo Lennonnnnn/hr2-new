@@ -1,0 +1,52 @@
+/* Style for "Display X records per page" text */
+.dataTables_length label {
+    color: #007bff; /* Change text color to blue */
+    font-weight: bold; /* Make the text bold */
+}
+
+/* Style for "Search:" label */
+.dataTables_filter label {
+    color: #007bff; /* Change text color to blue */
+    font-weight: bold; /* Make the text bold */
+}
+
+/* Style for "Showing X to X of X records" text */
+.dataTables_info {
+    color: #007bff; /* Change text color to blue */
+    font-weight: bold; /* Make the text bold */
+}
+
+/* Style for the "Search" input box */
+.dataTables_filter input {
+    background-color: #343a40; /* Dark background */
+    color: white; /* White text */
+    border: 1px solid #ddd; /* Light border */
+}
+
+/* Style for the "Display records per page" select dropdown */
+.dataTables_length select {
+    background-color: #343a40; /* Dark background */
+    color: white; /* White text */
+    border: 1px solid #ddd; /* Light border */
+}
+
+/* Pagination button styles */
+.dataTables_paginate .paginate_button {
+    background-color: white;
+    color: red;
+    border: 1px solid #ddd;
+}
+
+/* Hover state for pagination buttons */
+.dataTables_paginate .paginate_button:hover {
+    background-color: blue;
+    color: white;
+    border: 2px solid #007bff;
+}
+
+/* Active page button styles */
+.dataTables_paginate .paginate_button.current {
+    background-color: white;
+    color: green;
+    border: 2px solid #28a745;
+}

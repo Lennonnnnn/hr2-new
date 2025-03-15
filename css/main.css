@@ -1,0 +1,165 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f2f5;
+}
+
+/* Sidebar Styles */
+#sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #2c3e50;
+    overflow-x: hidden;
+    transition: 0.5s ease;
+    padding-top: 20px;
+    color: #ecf0f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#sidebar.open {
+    width: 250px;
+}
+
+#sidebar h2 {
+    color: #ecf0f1;
+    margin: 20px 0;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar ul li {
+    margin: 15px 0;
+}
+
+#sidebar ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#sidebar ul li a:hover {
+    background-color: #34495e;
+    color: #ffffff;
+}
+
+#sidebar .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #ecf0f1;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+#sidebar .close-btn:hover {
+    color: #e74c3c;
+}
+
+/* Separator Line Styles */
+.separator {
+    width: 80%;
+    border: 1px solid #34495e;
+    margin: 20px 0;
+}
+
+/* Main Content Styles */
+#main-content {
+    transition: margin-left 0.5s ease;
+    padding: 20px;
+    width: 100%;
+}
+
+header {
+    background-color: black;
+    color: #ffffff;
+    padding: 0px 0; /* Reduced padding for a smaller header */
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 18px; /* Reduced font size for a smaller header text */
+}
+
+main {
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+form button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #2980b9;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #3498db;
+}
+
+/* Toggle Button Styles */
+.toggle-btn {
+    font-size: 16px; /* Smaller font size for the icon */
+    width: 30px; /* Width of the button */
+    height: 30px; /* Height of the button */
+    border: none; /* Remove border */
+    background-color: #3498db; /* Background color of the button */
+    color: #fff;
+    cursor: pointer; /* Change cursor to pointer on hover */
+    display: flex; /* Use flexbox for centering the icon */
+    align-items: center; /* Center the icon vertically */
+    justify-content: center; /* Center the icon horizontally */
+    border-radius: 50%; /* Make the button round */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth background color transition and scale effect */
+}
+
+.toggle-btn:hover {
+    background-color: #2980b9; /* Background color on hover */
+    transform: scale(1.2); /* Slightly enlarge the button on hover */
+}
